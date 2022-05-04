@@ -1,28 +1,22 @@
 F1 = Food.create(name: "Spagetti bolognese",
                  description: "Yummy spagetti to increase your life span!",
-                 price: 1500,
-                 sales: { price: 1000.00, percentage: 25, status: true })
+                 price: 150,
+                 sales: { price: 100.00, percentage: 25, status: true })
 
 F2 = Food.create(name: "Steaks",
                  description: "Nice mix of african special barbecue sauce",
-                 price: 750,
+                 price: 75,
                  status: "available")
 
 F3 = Food.create(name: "Lobsters",
                  description: "Crispy sea food delicacy to make your holiday",
-                 price: 1200)
+                 price: 120)
 
 C1 = Category.create(title: "Entree",
                      description: "Home made food ready to eat")
 
 C2 = Category.create(title: "Desserts",
                      description: "Finger-licking desserts")
-
-U1 = User.create(first_name: "Damilola",
-                 last_name: "Roberts",
-                 email: "dr@yahoo.com",
-                 password: "whatever",
-                 password_confirmation: "whatever")
 
 U2 = User.create(first_name: "Jeff",
                  last_name: "Roberts",
@@ -62,4 +56,4 @@ Comment2 = Comment.create(comment: "I love it!!", food_id: F1.id, user_id: U2.id
 
 F4 = Food.create(name: "Akara",
                  description: "Home made akara",
-                 price: 500)
+                 price: 50)

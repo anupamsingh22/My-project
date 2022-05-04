@@ -30,7 +30,7 @@
 			<td><%= details["food"]['price'] %></td>
 		<% end %>
 		<td><%= details["qty"] %></td>
-		<td>N<%= @item_total_price %></td>
+		<td>₹<%= @item_total_price %></td>
 	</tr>
 	</tbody>
 	<% end %>
@@ -42,7 +42,7 @@
 		<td></td>
 		<td>Subtotal</td>
 		<td></td>
-		<td>N<%= @current_order.sub_total %></td>
+		<td>₹<%= @current_order.sub_total %></td>
 	</tr>
 	<tr>
 		<% @current_order.vat %>
@@ -51,7 +51,7 @@
 		<td></td>
 		<td>VAT</td>
 		<td></td>
-		<td>N<%= @current_order.vat %></td>
+		<td>₹<%= @current_order.vat %></td>
 	</tr>
 	<tr>
 		<td></td>
@@ -59,7 +59,7 @@
 		<td></td>
 		<td>Delivery cost</td>
 		<td></td>
-		<td>N<%= @current_order.delivery_cost %></td>
+		<td>₹<%= @current_order.delivery_cost %></td>
 	</tr>
 	<tr>
 		<td></td>
@@ -78,7 +78,7 @@
 			<td></td>
 			<td>Total</td>
 			<td></td>
-			<td id="total">N<%= @current_order.total %></td>
+			<td id="total">₹<%= @current_order.total %></td>
 		</tr>
 	</tfoot>
 </table>

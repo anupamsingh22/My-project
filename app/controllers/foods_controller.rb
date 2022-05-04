@@ -86,7 +86,7 @@ class FoodsController < ApplicationController
 
   def save_food
     @food[:food_image_file_name] = @food_image_url
-    if food_params[:sales][:js]
+    if food_params[:sales]
       food = food_params[:sales]
       food_status = (food["status"] == "true") ? true : false
       @food.update(sales: { price: food["price"].to_f,
