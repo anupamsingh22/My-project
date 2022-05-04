@@ -1,0 +1,40 @@
+<div class="row full-height">
+ <%=render 'layouts/category' %>
+ <div class="col s9 full-height scroll-bar">
+   <div class="panel header-panel flow-text z-depth-3" style="background-color: #66bb6a;color:white;"><%= (!@category.nil?) ? @category.title : "All Cuisines"  %></div>
+  <div class="row"> <% @foods = (!@category.nil?) ? @category.foods : @foods  %>
+  <% @foods.each do |food| %>
+      <div class="col s12 m6 l4">
+      <div class="card">
+        <div class="card-image">
+           <%= link_to(food) do %>
+              <%= image_tag((food.food_image.url || "nigerian-jollof-rice.jpg"), :width => "100%", :height => "auto", :style => "max-width:100%", :class => "image-thumb", :alt => "food") %>
+              <span class="card-title" style="color:black;font-weight:bold;"><%= food.name %></span>
+            <% end %>
+        </div>
+        <div class="card-content">
+          <p>Price: <% if food.sales[:status] %>
+            <span class="price-tag"><s> N<%= food.price%></s></span>
+            <span class="price-tag">Sales! N<%= food.sales[:price]%></span>
+          <% else %>
+            <span class="price-tag">N<%= food.price%></span>
+          <% end %></p>
+          <p><%= food.description%></p>
+        </div>
+        <div class="card-action">
+            <div class="right"><i class="material-icons left no-right-margin">shopping_cart</i><%= link_to "
+						 #{this_food_in_cart(food)}", carts_path, class: "cart left no_left_pad no-right-margin", id: "cart" %></div>
+            <% if food.status == "available" %>
+              <%= button_to "Add to cart", cart_items_path(food_id: food.id) %>
+            <% else %>
+              <p>Out of stock</p>
+            <% end %>
+          </div>
+      </div>
+    
+      </div>
+
+  <% end %>
+  </div>
+ </div>
+</div>
