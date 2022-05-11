@@ -19,7 +19,9 @@ class FoodsController < ApplicationController
     @food = {}
     if upload_image
       @food = Food.create(food_params)
+      @food.update(restaurant_name:current_user.restaurant_name)
       flash[:success] = "#{@food.name} has been added successfully."
+
       redirect_to dashboard_path
     else
       flash[:error] = "An error occured. Try adding #{@food.name} again."

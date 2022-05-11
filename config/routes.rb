@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :orders
   end
-
   get "display/:option" => "sales#display", as: "display"
   get "login" => "sessions#new"
   get "/payment/processed" => "checkout#create", as: :get_payment_completed

@@ -1,14 +1,20 @@
 F1 = Food.create(name: "Spagetti bolognese",
+                 category_id: 5,
                  description: "Yummy spagetti to increase your life span!",
                  price: 150,
+                 restaurant_name:"baba ka dhaba",
                  sales: { price: 100.00, percentage: 25, status: true })
 
-F2 = Food.create(name: "Steaks",
+F2 = Food.create(name: "Entry drink",
                  description: "Nice mix of african special barbecue sauce",
+                 category_id: 1,
                  price: 75,
+                 restaurant_name:"baba ka dhaba",
                  status: "available")
 
 F3 = Food.create(name: "Lobsters",
+                 category_id: 2,
+                 restaurant_name:"baba ka dhaba",
                  description: "Crispy sea food delicacy to make your holiday",
                  price: 120)
 
@@ -22,6 +28,7 @@ U2 = User.create(first_name: "Jeff",
                  last_name: "Roberts",
                  email: "jr@yahoo.com",
                  password: "whatever",
+                 restaurant_name:"Raju Bhai Thandai Wale",
                  password_confirmation: "whatever")
 
 A1 = User.create(first_name: "Nadayar",
@@ -29,6 +36,7 @@ A1 = User.create(first_name: "Nadayar",
                  email: "nadayar@andela.com",
                  password: "nadayar",
                  password_confirmation: "nadayar",
+                 restaurant_name:"baba ka dhaba",
                  role: "admin")
 
 O1 = Order.create(Status: "Completed", transaction_id: "123ss1", user_id: U1.id)
@@ -55,5 +63,7 @@ Comment1 = Comment.create(comment: "Best food ever", food_id: F1.id, user_id: U1
 Comment2 = Comment.create(comment: "I love it!!", food_id: F1.id, user_id: U2.id)
 
 F4 = Food.create(name: "Akara",
+                 restaurant_name:"baba ka dhaba",
+                 category_id: 2,
                  description: "Home made akara",
                  price: 50)

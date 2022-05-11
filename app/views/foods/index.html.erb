@@ -13,6 +13,7 @@
             <% end %>
         </div>
         <div class="card-content">
+        <h6>Restaurant:- <b><%=food.restaurant_name%></b></h6>
           <p>Price: <% if food.sales[:status] %>
             <span class="price-tag"><s> ₹<%= food.price%></s></span>
             <span class="price-tag">Sales! ₹<%= food.sales[:price]%></span>

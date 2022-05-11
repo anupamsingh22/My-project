@@ -36,6 +36,7 @@
 
 		<tbody>
 			<% @foods.each do |food| %>
+			<%if food.restaurant_name == current_user.restaurant_name%>
 				<a href = "/>">
 				<tr>
 					<td><%=link_to "#{food.name}", edit_food_path(food.id) %></td>
@@ -59,7 +60,7 @@
 						<% end %>
 					</td>
 				</tr>
-
+<%end%>
 			<% end %>
 		</tbody>
 	</table>
