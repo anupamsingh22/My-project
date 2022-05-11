@@ -1,11 +1,11 @@
 class UserMailer < ApplicationMailer
 
-  default :from => "dinnerdashcafe@gmail.com"
+  default :from => "Zwiggy@gmail.com"
 
   def welcome_email(user)
     @user = user
     attachments.inline['logo3.png'] = File.read("app/assets/images/logo3.png")
-    mail(:to => @user.email, :subject => "Welcome to Dinner Dash Cafe")
+    mail(:to => @user.email, :subject => "Welcome to Zwiggy Cafe")
   end
 
   def order_email(user, items)

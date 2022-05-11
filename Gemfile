@@ -2,12 +2,11 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
+gem 'rails', '~> 6.0', '>= 6.0.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-
+gem 'delayed_job', '>= 2.1.2'
 # Use materialize
 gem 'materialize-sass'
 
@@ -17,7 +16,7 @@ gem 'material_icons'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -26,6 +25,7 @@ gem 'celluloid'
 gem 'jquery-rails'
 
 gem 'figaro'
+gem 'ruby','>=0.1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -42,18 +42,14 @@ gem 'cloudinary'
 gem 'will_paginate'
 gem 'redis'
 gem 'sidekiq'
-# Use Unicorn as the app server
-# gem 'unicorn'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 group :development do
   gem 'bullet'
 end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-gem 'sqlite3', '< 1.4'
+gem 'sqlite3', '> 1.4'
   gem 'pry-nav'
   gem 'byebug'
   gem 'rspec-rails'
@@ -65,14 +61,14 @@ gem 'sqlite3', '< 1.4'
   gem "codeclimate-test-reporter", require: nil
   gem 'flog', '~> 4.3.2'
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '~> 2.3.0'
   gem 'launchy'
   gem 'letter_opener'
 end
 
 group :production do
   gem 'pg'
-  gem 'railties'
+  gem 'railties','>= 4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

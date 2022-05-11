@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
   include ApplicationHelper
 
-  default :from =>  "dinnerdashcafe@gmail.com"
+  default :from =>  "Zwiggy@gmail.com"
   layout 'mailer'
 end

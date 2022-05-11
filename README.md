@@ -1,6 +1,6 @@
 In this project you'll use Ruby on Rails to build an online commerce platform for a restaurant to facilitate online ordering.
 
-[![Code Climate](https://codeclimate.com/github/andela/dinner-dash-rails/badges/gpa.svg)](https://codeclimate.com/github/andela/dinner-dash-rails)   [![Test Coverage](https://codeclimate.com/github/andela/dinner-dash-rails/badges/coverage.svg)](https://codeclimate.com/github/andela/dinner-dash-rails/coverage)
+[![Code Climate](https://codeclimate.com/github/andela/Zwiggy-rails/badges/gpa.svg)](https://codeclimate.com/github/andela/Zwiggy-rails)   [![Test Coverage](https://codeclimate.com/github/andela/Zwiggy-rails/badges/coverage.svg)](https://codeclimate.com/github/andela/Zwiggy-rails/coverage)
 
 ## Introduction
 
@@ -25,7 +25,7 @@ Project implementation may **not** use:
 
 ### Getting Started
 
-1. One team member creates a repository named "dinner_dash"
+1. One team member creates a repository named "Zwiggy"
 2. Add the other team members as collaborators
 3. Add your project to Waffle.io
 4. Configure [Hound](https://houndci.com/) for style guide violations
@@ -249,7 +249,7 @@ When the card is processed, update the order to "paid" and send a confirmation e
 
 As a restaurant I have a registered contact phone number. When an order is placed online the system calls me with an interaction like this:
 
-* "Hi, this is DinnerDash calling with an online order. Press 1 to accept, 3 to reject". They press "1"
+* "Hi, this is Zwiggy calling with an online order. Press 1 to accept, 3 to reject". They press "1"
 * "The customer name is John Schmoe."
 * "The customer will pickup the order at 5:45PM"
 * "The order includes: shrimp wontons, chicken pad thai large, and green tea ice cream small. There are a total of 3 items."
