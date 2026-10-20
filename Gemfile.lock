@@ -100,7 +100,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.10)
     connection_pool (2.2.5)
-    crass (1.0.6)
+    crass (1.0.7)
     debug_inspector (1.1.0)
     delayed_job (4.1.10)
       activesupport (>= 3.0, < 8.0)
